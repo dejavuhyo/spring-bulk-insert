@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.insert.mapper.primary.PrimaryMapper">
+
+    <select id="selectDataList" resultType="com.example.insert.dto.DataDTO">
+        SELECT DISTINCT BIZPL_CD             -- 사업장코드
+                      , ORIGIN_BIZPL_CD      -- 최초사업장코드
+                      , BIZPL_NM             -- 사업장명
+                      , 'R' AS BIZPL_SP_TYPE -- 사업장타입(R:편의점, S:수퍼)
+                      , BIZPL_SP             -- 사업장구분(B:직영 C:가맹)
+                      , BIZPL_LNGT           -- 사업장경도
+                      , BIZPL_LTTD           -- 사업장위도
+                      , BIZPL_ADDR           --사업장주소
+                      , TEL_NO               -- 전화번호
+                      , OPEN_DT              -- 개점일자
+                      , CLOSE_DT             -- 폐점일자
+        FROM TS_MS_BIZPL
+    </select>
+
+</mapper>
