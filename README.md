@@ -1,4 +1,4 @@
-# Spring Bulk Insert
+# Spring Boot Bulk Insert
 
 ## 1. 설명
 Spring Boot에서 Bulk Insert 예제이다.
